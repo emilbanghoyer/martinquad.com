@@ -20,15 +20,12 @@ h1 {
     font-size: 6vh;
     font-weight: 200;
     color: #a23134;
+    line-height: 7vh;
 }
 
-@media only screen and (min-width: 768px) {
-    h1 { font-size: 9vh; }
-}
-
-.title::first-letter {
-    -webkit-initial-letter: 2 1;
-    initial-letter: 2 1;
+.raised {
+    font-size: 15vh;
+    letter-spacing: -2.5vh;
     color: #d34e47;
 }
 
@@ -54,23 +51,62 @@ section {
 main section:first-child {
     position: fixed;
     top: 0px;
-    height: 100%;
+    height: 90%;
 }
 
 footer {
-    position: absolute;
+    position: fixed;
+    display: flex;
     bottom: 2em;
-    left: 2em;
-    text-align: left;
+    height: 10%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 footer p {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 footer img {
-    width: 6rem;
+    width: 3rem;
     margin-bottom: 1vh;
+}
+
+/* On desktop */
+@media only screen and (min-width: 768px) {
+    h1 { 
+        font-size: 9vh;
+        line-height: 10vh;
+    }
+
+    .raised {
+        font-size: 20vh;
+    }
+
+    main section:first-child {
+        height: 100%;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 2em;
+        left: 2em;
+        text-align: left;
+        display: inline;
+        height: auto;
+        width: auto;
+    }
+
+    footer p {
+        font-size: 1.5rem;
+    }
+
+    footer img {
+        width: 6rem;
+        margin-bottom: 1vh;
+    }
 }

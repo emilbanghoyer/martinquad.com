@@ -1,0 +1,108 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+body {
+    background: #000;
+    font-family: 'Abril Fatface', sans-serif;
+    /* color: #fff; */
+    color: #d34e47;
+    background-image: url('bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    font-size: 6vh;
+    font-weight: 200;
+    color: #a23134;
+    line-height: 7vh;
+}
+
+.raised {
+    font-size: 15vh;
+    letter-spacing: -2.5vh;
+    color: #d34e47;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+main {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+}
+
+main section:first-child {
+    position: fixed;
+    top: 0px;
+    height: 90%;
+}
+
+footer {
+    position: fixed;
+    display: flex;
+    bottom: 2em;
+    height: 10%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer p {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+footer img {
+    width: 3rem;
+    margin-bottom: 1vh;
+}
+
+/* On desktop */
+@media only screen and (min-width: 768px) {
+    h1 { 
+        font-size: 9vh;
+        line-height: 10vh;
+    }
+
+    .raised {
+        font-size: 20vh;
+    }
+
+    main section:first-child {
+        height: 100%;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 2em;
+        left: 2em;
+        text-align: left;
+        display: inline;
+        height: auto;
+        width: auto;
+    }
+
+    footer img {
+        width: 6rem;
+        margin-bottom: 1vh;
+    }
+}

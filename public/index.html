@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MARTIN QUAD</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <main>
+            <section>
+                <h1 class="title"><span class="raised">V</span>OICI VENIR<br> LES OISEAUX!</h1>
+                <h1>AUGUST 7TH</h1>
+                <h1>TEATERØEN</h1>
+            </section>
+            <footer>
+                <img src="skf_white_cropped.png" alt="Statens Kunstfond">
+                <p>RVSP <a href="mailto:press@martinquad.com">press@martinquad.com</a></p>
+            </footer>
+        </main>
+
+        <script>
+            const main = document.getElementsByTagName("main")[0];
+
+            setInterval(() => {
+                if (main.style["visibility"] == "hidden") {
+                    main.style["visibility"] = "visible";
+                } else {
+                    main.style["visibility"] = "hidden";
+                }
+            }, 1000);
+        </script>
+    </body>
+</html>

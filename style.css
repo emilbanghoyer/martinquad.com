@@ -7,7 +7,8 @@ html, body {
 body {
     background: #000;
     font-family: 'Abril Fatface', sans-serif;
-    color: #fff;
+    /* color: #fff; */
+    color: #d34e47;
     background-image: url('bg.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -16,8 +17,19 @@ body {
 }
 
 h1 {
-    font-size: 4em;
-    font-weight: 800;
+    font-size: 6vh;
+    font-weight: 200;
+    color: #a23134;
+}
+
+@media only screen and (min-width: 768px) {
+    h1 { font-size: 9vh; }
+}
+
+.title::first-letter {
+    -webkit-initial-letter: 2 1;
+    initial-letter: 2 1;
+    color: #d34e47;
 }
 
 a {
@@ -42,22 +54,23 @@ section {
 main section:first-child {
     position: fixed;
     top: 0px;
-    height: 70%;
+    height: 100%;
 }
 
-main section:last-child {
-    position: fixed;
-    bottom: 0px;
-    height: 30%;
-    justify-content: center;
+footer {
+    position: absolute;
+    bottom: 2em;
+    left: 2em;
+    text-align: left;
 }
 
-section p {
-    padding: 0.2em;
+footer p {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
 }
 
-section img {
-    width: 5em;
+footer img {
+    width: 6rem;
+    margin-bottom: 1vh;
 }

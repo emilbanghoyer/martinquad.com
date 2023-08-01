@@ -1,26 +1,40 @@
-html, body {
+* {
     margin: 0;
     padding: 0;
-    text-align: center;
 }
 
 body {
-    background: #000;
-    font-family: 'Abril Fatface', sans-serif;
-    /* color: #fff; */
-    color: #d34e47;
-    background-image: url('bg.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
+    background-color: black;
+    color: #a23134;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    width: 100%;
+    height: 100%;
 }
 
-h1 {
-    font-size: 6vh;
+#bgvideo {
+    min-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: auto;
+    height: auto;
+    z-index: -1;
+    background-color: black;
+    object-position: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1.title {
+    font-size: 10vh;
     font-weight: 200;
-    color: #a23134;
     line-height: 7vh;
+    font-family: 'Abril Fatface', sans-serif;
 }
 
 .raised {
@@ -29,80 +43,96 @@ h1 {
     color: #d34e47;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-main {
-    display: flex;
-    height: 100%;
-    width: 100%;
-}
-
-section {
+/* Front page */
+header {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    width: 100%;
-    align-items: center;
+    justify-content: center;
+    height: 10vh;
 }
 
-main section:first-child {
-    position: fixed;
-    top: 0px;
-    height: 90%;
+header h1 {
+    font-size: 2vh;
+    letter-spacing: 0.2vh;
+    
 }
 
-footer {
-    position: fixed;
+#mainfrontpage {
     display: flex;
-    bottom: 2em;
-    height: 10%;
-    width: 100%;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: center;
+    height: 90vh;
 }
 
-footer p {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
+#mainfrontpage h2 {
+    font-size: 4vh;
 }
 
-footer img {
-    width: 3rem;
-    margin-bottom: 1vh;
+#mainfrontpage section:first-child {
+    height: 40%;
+    /* background-color: aliceblue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-/* On desktop */
-@media only screen and (min-width: 768px) {
-    h1 { 
-        font-size: 9vh;
-        line-height: 10vh;
-    }
+#mainfrontpage section:last-child {
+    height: 60%;
+    /* background-color:antiquewhite; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
 
-    .raised {
-        font-size: 20vh;
-    }
+/* Collection page */
+#maincollection {
+    margin-bottom: 4vh;
+}
 
-    main section:first-child {
-        height: 100%;
-    }
+#maincollection .title {
+    padding: 6vh;
+}
 
-    footer {
-        position: absolute;
-        bottom: 2em;
-        left: 2em;
-        text-align: left;
-        display: inline;
-        height: auto;
-        width: auto;
-    }
+#runwayimagessection {
+    display: flex;
+    flex-direction: column;
+}
 
-    footer img {
-        width: 6rem;
-        margin-bottom: 1vh;
-    }
+#runwayimagessection img {
+    height: 100vh;
+    padding: 4vh;
+}
+
+#creditssection p {
+    color: white;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+/* About page */
+#mainabout {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: left;
+    margin: 0 4vw;
+}
+
+#mainabout p {
+    font-size: 4vh;
+    font-weight: 800;
+}
+
+/* Contact page */
+/* About page */
+#maincontact {
+    height: 90vh;
+    text-align: left;
+    margin: 0 4vw;
+}
+
+#maincontact p {
+    font-size: 4vh;
+    font-weight: 800;
 }

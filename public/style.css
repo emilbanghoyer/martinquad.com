@@ -84,6 +84,32 @@ header h1 {
     justify-content: flex-start;
 }
 
+/* Collection/opera navigation page */
+#maincollectionopera {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90vh;
+}
+
+#maincollectionopera h1 {
+    font-size: 5vh;
+    padding: 1vh 0;
+}
+
+/* About/contact navigation page */
+#mainaboutcontact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90vh;
+}
+
+#mainaboutcontact h1 {
+    font-size: 5vh;
+    padding: 1vh 0;
+}
+
 /* Collection page */
 #maincollection {
     margin-bottom: 4vh;
@@ -125,7 +151,6 @@ header h1 {
 }
 
 /* Contact page */
-/* About page */
 #maincontact {
     height: 90vh;
     text-align: left;
@@ -135,4 +160,20 @@ header h1 {
 #maincontact p {
     font-size: 4vh;
     font-weight: 800;
+}
+
+/* Opera page */
+#mainopera {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#mainopera .title {
+    padding: 10vh 0;
+}
+
+#mainopera iframe {
+    width: 50vw;
+    height: 30vw;
 }

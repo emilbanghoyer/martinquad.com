@@ -15,18 +15,30 @@
 
         <!-- Header -->
         <header>
-            <h1>MARTIN QUAD</h1>
+            <h1><a href="">MARTIN QUAD</a></h1>
         </header>
 
         <!-- Front page -->
         <main id="mainfrontpage">
             <section>
-                <h1 class="title"><span class="raised">V</span>OICI VENIR LES OISEAUX!</h1>
+                <h1 class="title"><a href="#collectionopera"><span class="raised">V</span>OICI VENIR LES OISEAUX!</a></h1>
             </section>
             <section>
-                <h2><a href="#info">INFO</a></h2>
+                <h2><a href="#aboutcontact">INFO</a></h2>
             </section>
-        </main>¨
+        </main>
+
+        <!-- Collection/opera navigation -->
+        <main id="maincollectionopera">
+            <h1><a href="collection.html">COLLECTION</a></h1>
+            <h1><a href="opera.html">OPERA</a></h1>
+        </main>
+
+        <!-- About/contact navigation -->
+        <main id="mainaboutcontact">
+            <h1><a href="#about">ABOUT</a></h1>
+            <h1><a href="#contact">CONTACT</a></h1>
+        </main>
 
         <!-- About page -->
         <main id="mainabout">
@@ -62,24 +74,41 @@
 
         <script>
             const frontpageMainTag = document.getElementById("mainfrontpage");
+            const collectionOperaMainTag = document.getElementById("maincollectionopera");
+            const aboutContactMainTag = document.getElementById("mainaboutcontact");
             const aboutMainTag = document.getElementById("mainabout");
             const contactMainTag = document.getElementById("maincontact");
 
+            const mainTags = new Array(
+                frontpageMainTag,
+                aboutMainTag,
+                contactMainTag,
+                collectionOperaMainTag,
+                aboutContactMainTag
+            )
+
             function showFrontPage() {
+                mainTags.forEach(x => x.style.display = "none");
                 frontpageMainTag.style.display = "flex";
-                aboutMainTag.style.display = "none";
-                contactMainTag.style.display = "none";
+            }
+
+            function showCollectionOperaPage() {
+                mainTags.forEach(x => x.style.display = "none");
+                collectionOperaMainTag.style.display = "flex";
+            }
+
+            function showAboutContactPage() {
+                mainTags.forEach(x => x.style.display = "none");
+                aboutContactMainTag.style.display = "flex";
             }
             
             function showAboutPage() {
-                frontpageMainTag.style.display = "none";
+                mainTags.forEach(x => x.style.display = "none");
                 aboutMainTag.style.display = "flex";
-                contactMainTag.style.display = "none";
             }
 
             function showContactPage() {
-                frontpageMainTag.style.display = "none";
-                aboutMainTag.style.display = "none";
+                mainTags.forEach(x => x.style.display = "none");
                 contactMainTag.style.display = "block";
             }
 
@@ -87,6 +116,16 @@
 
             function changePage() {
                 const hashValue = location.hash;
+                if (hashValue === "#collectionopera") {
+                    showCollectionOperaPage();
+                    return;
+                }
+
+                if (hashValue === "#aboutcontact") {
+                    showAboutContactPage();
+                    return;
+                }
+
                 if (hashValue === "#about") {
                     showAboutPage();
                     return;

@@ -122,10 +122,12 @@ header h1 {
 #runwayimagessection {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 #runwayimagessection img {
     height: 100vh;
+    width: fit-content;
     padding: 4vh;
 }
 
@@ -133,6 +135,7 @@ header h1 {
     color: white;
     font-size: x-large;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 /* About page */
@@ -176,4 +179,88 @@ header h1 {
 #mainopera iframe {
     width: 50vw;
     height: 30vw;
+}
+
+/* On mobile */
+@media only screen and (orientation: portrait) {
+    #mainopera iframe {
+        width: 90vw;
+        height: auto;
+    }
+
+    #bgvideo {
+        min-height: 100%;
+    }
+
+    h1.title {
+        font-size: 5vh;
+        font-weight: 200;
+        line-height: 7vh;
+        font-family: 'Abril Fatface', sans-serif;
+    }
+
+    .raised {
+        font-size: 10vh;
+        letter-spacing: -1.5vh;
+        color: #d34e47;
+    }
+
+    #maincollection {
+        margin: 0;
+        width: 100vw;
+    }
+
+    #runwayimagessection img {
+        width: 85vw;
+        height: auto;
+        padding: 1.5vh 0;
+    }
+
+    #runwayimagessection {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 2vh;
+    }
+
+    #maincollection h1.title {
+        padding: 2vh;
+        padding-top: 6vh;
+    }
+
+    #creditssection {
+        text-align: center;
+    }
+
+    #creditssection p {
+        color: white;
+        font-size: large;
+        font-weight: bold;
+    }
+
+    #mainabout {
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        text-align: left;
+        margin: 0 4vw;
+    }
+
+    #mainabout p {
+        font-size: 2vh;
+        font-weight: 800;
+        padding: 2vh 2vh;
+    }
+
+    #maincontact {
+        height: 90vh;
+        text-align: left;
+        margin: 0 4vw;
+    }
+    
+    #maincontact p {
+        font-size: 2vh;
+        font-weight: 800;
+        padding: 0 2vh;
+    }
 }
